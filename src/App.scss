@@ -1,0 +1,212 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+	body {
+		height: 100%;
+		h1 {
+			font-size: clamp(2.5rem, 4vw, 4rem);
+			font-weight: 500;
+		}
+		h2 {
+			font-size: clamp(1.5rem, 2.5vw, 4rem);
+		}
+		h3 {
+			font-size: clamp(1.2rem, 1.8vw, 3rem);
+		}
+		p {
+			font-size: clamp(1.1rem, 1.2vw, 2rem);
+		}
+	}
+}
+
+input{
+	background: #fff!important;
+	color:#000;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+	height: 100%;
+	&::-webkit-scrollbar {
+		width: 7px;
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: #777;
+		border-radius: 25px;
+	}
+}
+
+body{
+	&.menu-open{
+		overflow: hidden;
+		&::before{
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			content: "";
+			background-color: #000000a6;
+		}
+	}
+}
+
+.wrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	flex-direction: inherit;
+	width: 100%;
+	margin-top: 40px;
+}
+
+.loginForm{
+	width: 100%;
+	padding: 30px 20px;
+	background-color:#24292e;
+	border-radius: 15px;
+   label{
+	color:#fff;
+	margin-bottom: 10px;
+   }
+   input{
+	background-color: #fff;
+	margin-bottom: 20px;
+   }
+}
+
+
+//accordion
+.accordion-container {
+	font-family: Arial, sans-serif;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #f9f9f9;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	.accordion-control {
+		background-color: #24292e;
+		color: white;
+		padding: 7px;
+		font-size: 18px;
+		font-weight: bold;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		border: none;
+		text-align: left;
+		width: 100%;
+		&:hover{
+		  background-color: #24292e;
+		}
+		&:focus{
+		  outline: none;
+		}
+	}
+	.accordion-panel {
+		padding: 15px;
+		background-color: #ffffff;
+		color: #333333;
+		font-size: 16px;
+		border-top: 1px solid #ddd;
+	   .accordion-panel:last-child {
+		border-bottom: 1px solid #ddd;
+		} 
+	}
+}
+
+//table
+.tableCont{
+	width: 100%;
+	border-radius: 15px;
+	margin: 30px 0;
+	overflow: hidden;
+	border-collapse: separate;
+	border:1px solid #dee2e6!important;
+	border-spacing: 0;
+	thead{
+		tr{
+			th{
+				padding:10px;
+				background: #20233a;
+				color: #fff;
+				width: 33.33%;
+				svg{
+					vertical-align: middle;
+					margin-left: 5px;
+				}
+				&:first-child{
+					border-top-left-radius: 15px;
+				}
+				&:last-child{
+					border-top-right-radius: 15px;
+				}
+				@media(max-width: 768px){
+					padding: 8px;
+				}
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				padding: 10px;
+				a{
+					text-decoration: none;
+				}
+				button{
+					font-size: 14px;
+					padding: 10px;
+					font-weight: normal;
+				}
+				@media(max-width: 768px){
+					padding: 8px;
+				}
+			}
+		}
+	}
+}
+
+.carContents{
+	width: 33%;
+	border: 1px solid #777;
+	border-radius: 15px;
+	@media(max-width: 768px){
+		width: 100%;
+	}
+}
+  
+.detImage{
+	width:100%;
+	padding:20px;
+	img{
+		width:100%;
+	}
+	@media(max-width: 768px){
+		img{
+			height: 320px!important;
+			object-fit: contain;
+		}
+	}
+}
+
+.detContents{
+	width: 60%;
+	@media(max-width: 768px){
+		width: 100%;
+	}
+}
+  
+  
